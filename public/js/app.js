@@ -74,6 +74,7 @@ angular.module("productsApp", ['ngRoute'])
         $scope.products = products.data;
 		$scope.showProduct = function(product) {
             var productUrl = "/product/" + product._id;
+			console.log("DEBUG: " + productUrl);
             $location.path(productUrl);			
 		};
 		$scope.rowselected = function(row) {
