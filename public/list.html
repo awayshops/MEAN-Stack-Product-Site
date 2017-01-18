@@ -15,7 +15,7 @@
 <div class="container">
   <table class="table table-hover">
     <tbody>
-      <tr ng-repeat="product in products | orderBy:'manufacturer'" ng-class="{'selected':$index == rowToHighlight}" style="cursor:pointer" ng-click="showProduct(product)" ng-mouseover="highlightRow($index)">
+      <tr ng-repeat="product in products | orderBy:'manufacturer'" ng-class="{'selected':$index == rowToHighlight}" style="cursor:pointer" ng-click="showProduct({{$index}});" ng-mouseover="highlightRow($index)">
           <!-- <a ng-href="#/product/{{product._id}}">{{ product.category }} {{ product.manufacturer }} {{ product.name }}</a> -->
         <td>
           {{ product.category }}
@@ -24,7 +24,7 @@
            {{ product.manufacturer }}
         </td>
         <td>
-           {{ product.name }}
+           <a ng-href="#/product/{{product.name}}">
         </td>
       </tr>
     </tbody>
