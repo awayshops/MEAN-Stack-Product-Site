@@ -15,7 +15,7 @@
 <div ng-hide="editMode" class="container">
   <div>
     <p ng-if="product.name">Product Name: {{ product.name }} </p>
-    <p ng-if="product.thumbnail_url">Thumbnail URL: {{ product.thumbnail_url }} </p>
+    <p ng-if="product.thumbnail_url">Thumbnail URL: <a ng-href="{{ product.thumbnail_url }}" </p>
     <p ng-if="product.url">URL: <a ng-href="{{ product.url }}" target="_blank">{{ product.url }}</a></p>
     <p ng-if="product.starting_price"> Starting Price: {{ product.starting_price | currency }} </p>
     <p ng-if="product.description">Description:<br><textarea cols="40" rows="8">{{ product.description }}</textarea></p>
