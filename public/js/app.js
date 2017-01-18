@@ -72,6 +72,12 @@ angular.module("productsApp", ['ngRoute'])
     })
     .controller("ListController", function(products, $scope) {
         $scope.products = products.data;
+		$scope.showProduct = function(product) {
+			$location.path('#/product/' + product._id);
+		};
+		$scope.rowselected = function(row) {
+			$scope.rowNumber = row;
+		};		
     })
     .controller("NewProductController", function($scope, $location, Products) {
         $scope.back = function() {
