@@ -18,7 +18,7 @@
     <p ng-if="product.thumbnail_url">Thumbnail URL: {{ product.thumbnail_url }} </p>
     <p ng-if="product.url">URL: <a ng-href="{{ product.url }}" target="_blank">{{ product.url }}</a></p>
     <p ng-if="product.starting_price"> Starting Price: {{ product.starting_price }} </p>
-    <p ng-if="$parent.product.description"> Description: <textarea>{{ product.description }}</textarea></p>
+    <p ng-if="$parent.product.description"><label>Description</label><br><textarea>{{ product.description }}</textarea></p>
     <p>
       <button style="margin-top:20px" class="btn btn-default" ng-click="toggleEdit()">Edit</button>
       <a style="margin-top:20px" class="btn btn-default" href="#/">Back</a>
