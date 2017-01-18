@@ -1,0 +1,41 @@
+<div class="row" ng-hide="product._id">
+  <div class="col-md-6">
+      <h2>Create new product</h2>
+  </div>
+</div>
+<div class="container">
+  <div>
+    <p>
+      <label>Category (required)</label> 
+      <input id="category" class="form-control" type="text" ng-model="product.category" required> 
+    </p>
+    <p>
+      <label>Manufacturer (required)</label> 
+      <input id="manufacturer" class="form-control" type="text" ng-model="product.manufacturer" required> 
+    </p>
+    <p>
+      <label>Product Name (required)</label> 
+      <input id="name" class="form-control" type="text" ng-model="product.name" required> 
+    </p>
+    <p>
+      <label>Thumbnail URL</label> 
+      <input id="thumbnail_url" class="form-control" type="text" ng-model="product.thumbnail_url"> 
+    </p>
+    <p>
+      <label>URL</label> 
+      <input id="url" class="form-control" type="text" ng-model="product.url"> 
+    </p>
+    <p>
+      <label>Starting Price</label> 
+      <input id="starting_price" class="form-control" type="text" min="0.01" step="0.01" ng-model="product.starting_price" ui-number-mask="4"> 
+    </p>
+    <p>
+      <label>Description</label> 
+	  <textarea id="description" class="form-control" cols="40" rows="8" ng-model="$parent.product.description"></textarea>
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="saveProduct(product)">Save</button>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Back</button>
+    </p>
+  </div>
+</div>
